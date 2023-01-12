@@ -73,7 +73,7 @@ const toys = [
     ]
 let listNoCats = []
 for (const toy of toys) {
-    if (toy.name.includes('gato') == false) {
+    if (!toy.name.includes('gato')) {
       listNoCats.push(toy.name);
       console.log(toy.name)
     }
@@ -89,9 +89,8 @@ const toys1 = [
 	{id: 40, name: 'El gato felix', sellCount: 35}
 ]
 for (const item of toys1) {
-    if (item.sellCount >= 15) {
-        popularToys.push(item.sellCount);
-        console.log(item);
+    if (item.sellCount > 15) {
+        popularToys.push(item);
     }
 }
 console.log(popularToys);
