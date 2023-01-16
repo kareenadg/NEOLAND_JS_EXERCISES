@@ -1,0 +1,26 @@
+ body {
+   background-color: rgb(192, 156, 119);
+}
+
+.card{
+    background-color: rgb(231, 207, 179);
+    font-family: Palatino;
+    text-align: center;
+
+}
+h2{
+  font-size: 35px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-family: cursive;
+  font-size: 10 px;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+img {
+  width: 300px;
+  object-fit: cover;
+}
