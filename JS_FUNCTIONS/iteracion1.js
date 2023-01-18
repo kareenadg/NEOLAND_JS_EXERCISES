@@ -107,3 +107,29 @@ const finderName = (list, element) => {
   }} return false;
 };
 console.log(finderName(nameFinder, "Peggy"));
+
+//1.8
+const counterWords = [
+  'code',
+  'repeat',
+  'eat',
+  'sleep',
+  'code',
+  'enjoy',
+  'sleep',
+  'code',
+  'enjoy',
+  'upgrade',
+  'code'
+];
+let repeatedItems = [];
+
+const repeatCounter = list => {
+  for (const item of list){
+if (repeatedItems[item]){
+repeatedItems[item]++
+  }
+else {repeatedItems[item]=1}}
+return repeatedItems};
+console.log(repeatCounter(counterWords));
+
