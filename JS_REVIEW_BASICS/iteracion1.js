@@ -81,3 +81,35 @@ console.log(userFavorite);
 
 //4
 
+const animals = ['Caracol', 'Mosquito', 'Salamandra', 'Ajolote'];
+
+const findArrayIndex = (array, text) => {
+    for (const item of array) {
+        if(item == text) 
+ return array.indexOf(item);
+    }
+   /* if(array.includes(text))
+return array.indexOf(text); */
+};
+console.log(findArrayIndex(animals, "Ajolote"));
+
+//5
+
+const rollDice = (min, max) => {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1) + min)
+};
+console.log(rollDice(1, 6));
+
+//6
+
+const footB = ['Mesirve', 'Cristiano Romualdo', 'Fernando Muralla', 'Ronalguiño'];
+
+const swap = (array, i1, i2) => {
+    let chanGe = array[i1];
+    array[i1] = array[i2];
+    array[i2] = chanGe;
+}
+swap(footB, 0, 2);
+console.log(footB);

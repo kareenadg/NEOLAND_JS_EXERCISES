@@ -10,3 +10,5 @@ let y = 10;
 
 //1.4
 let z = h + y;
+
+console.log(z);

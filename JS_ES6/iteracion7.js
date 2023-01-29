@@ -18,12 +18,12 @@ console.log(scoreSum);
 
 //7.2
 
-/* const alumnsApproved = exams.reduce((acc, alumn) => acc += alumn.score >= 5, 0);
-console.log(alumnsApproved); */
- 
+const approved = exams.filter((alumn) => alumn.score >= 5);
+console.log(approved);
+const sumScore = approved.reduce((acc, alumn) => acc += alumn.score, 0);
+console.log(sumScore);
 
 //7.3
 
 const scoreAverage = exams.reduce((acc, alumn) => acc += alumn.score, 0) / exams.length;
 console.log(scoreAverage);
-

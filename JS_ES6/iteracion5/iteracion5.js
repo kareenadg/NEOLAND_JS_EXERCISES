@@ -31,9 +31,9 @@ console.log(streamersName);
 //5.5
 
 const streamersValue = streamers.filter((user) => user.gameMorePlayed.includes("Legends"));
-// const olderStreamers = streamersValue.age > 35 == streamersValue.gameMorePlayed.toUpperCase()
+for (const user of streamersValue) {
+	if (user.age > 35) {
+		user.gameMorePlayed = user.gameMorePlayed.toUpperCase();
+	}
+}
 console.log(streamersValue);
-
-//5.6
-
-//5.7

@@ -36,11 +36,11 @@ const cities = [
 	{isVisited:false, name: 'Seul'}
 ];
 
-const visitedCities = cities.map((cities) => {
-    if (cities.isVisited === true) {
-        return cities.name + "(Visited)"
+const visitedCities = cities.map((city) => {
+    if (city.isVisited === true) {
+        return city.name + "(Visited)"
     } else {
-        return cities.name
+        return city.name
     }}
 );
 console.log(visitedCities);

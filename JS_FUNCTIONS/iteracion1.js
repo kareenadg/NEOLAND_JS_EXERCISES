@@ -8,29 +8,31 @@ function sum(numberOne = 5, numberTwo = 8) {
   };
 sum();
 
-//1.2
-const avengers = ['Hulk', 'Thor', 'IronMan', 'Captain A.', 'Spiderman', 'Captain M.'];
 
-function findLongestWord(param) {
-  let name = "";
-  for (const avenger of param) {
-    if (avenger.length > name.length){
-      name = avenger;
-    } 
-  }
-  return name
-};
-console.log(findLongestWord(avengers));
+//1.2
+ const avengers = ['Hulk', 'Thor', 'IronMan', 'Captain A.', 'Spiderman', 'Captain M.'];
+
+ const findLongestWord = param => {
+  let longName = "";
+  for (const item of param) {
+    if(item.length > longName.length){
+      longName = item
+    }
+  } return longName;
+ }
+ console.log(findLongestWord(avengers));
+
 
 //1.3
 const numbers = [1, 2, 3, 5, 45, 37, 58];
 
-const sumAll = sum => {
+const sumAll = param => {
   let acc = 0;
-  for (const num of numbers){
-    acc += num } return acc
-};
+  for (const num of param) {
+    acc += num}  return acc;
+  }
 console.log(sumAll(numbers));
+
 
 //1.4
 const numbers1 = [12, 21, 38, 5, 45, 37, 6];
@@ -42,6 +44,7 @@ const average = param => {
     return acc / param.length
   };
   console.log(average(numbers1));
+
 
 //1.5
 const mixedElements = [6, 1, 'Rayo', 1, 'vallecano', '10', 'upgrade', 8, 'hub'];
@@ -58,6 +61,7 @@ const averageWord = sum => {
   }return word
 }
 console.log(averageWord(mixedElements));
+
 
 //1.6 
 const duplicates = [
@@ -85,6 +89,7 @@ const removeDuplicates = (duplicates, i = -1) => {
 };
 removeDuplicates(duplicates);
 
+
 //1.7
 const nameFinder = [
   'Peter',
@@ -107,6 +112,7 @@ const finderName = (list, element) => {
   }} return false;
 };
 console.log(finderName(nameFinder, "Peggy"));
+
 
 //1.8
 const counterWords = [

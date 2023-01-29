@@ -34,5 +34,5 @@ const mutations = [
 const mutationName = mutations.find((mutation) => mutation.name === "Porompompero");
 console.log(mutationName);
 
-/* const newMix = [...alienName, ...mutationName];
-console.log(newMix); */
+const newMix = {...alienName, ...mutationName};
+console.log(newMix);

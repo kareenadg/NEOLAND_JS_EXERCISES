@@ -34,15 +34,35 @@ console.log(myUl);
 
 //1.4
 
-/* Crea dinamicamente en el html una lista de div que contenga un elemento 
-h4 para el titulo y otro elemento img para la imagen.
-const countries = [
+/* Crea dinamicamente en el html una lista de div que contenga un elemento h4 para el titulo y otro elemento img para la imagen.
+ */
+
+const countriesOne = [
 	{title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=1'}, 
 	{title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=2'},
 	{title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=3'},
 	{title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=4'},
 	{title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=5'}
-]; */
+]; 
+
+const myUls = document.createElement("ul");
+
+for (const iterator of object) {
+const myLis = document.createElement("li");
+const myDiv = document.createElement("div");
+const myH4 = document.createElement("h4");
+const myImg = document.createElement("img");
+
+
+}
+/* for (const item of countriesOne) {
+    myDiv.innerHTML = item;
+    document.body.appendChild(myDiv);
+};
+ */
+
+/* myDiv.appendChild(myH4);
+myDiv.appendChild(myImg); */
 
 //1.5
 

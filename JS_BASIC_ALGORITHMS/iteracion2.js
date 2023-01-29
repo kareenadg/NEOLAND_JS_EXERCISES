@@ -1,8 +1,10 @@
 //1.1
 const character = {
     name: "Jack Sparrow",
-    age: 25,
+    age: 10,
 };
+character.age = 25
+console.log(character.age);
 
 //1.2
 const firstName = "Jon";
