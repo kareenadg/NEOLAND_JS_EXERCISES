@@ -34,9 +34,6 @@ console.log(myUl);
 
 //1.4
 
-/* Crea dinamicamente en el html una lista de div que contenga un elemento h4 para el titulo y otro elemento img para la imagen.
- */
-
 const countriesOne = [
 	{title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=1'}, 
 	{title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=2'},
@@ -45,29 +42,33 @@ const countriesOne = [
 	{title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=5'}
 ]; 
 
-const myUls = document.createElement("ul");
-
-for (const iterator of object) {
-const myLis = document.createElement("li");
 const myDiv = document.createElement("div");
-const myH4 = document.createElement("h4");
-const myImg = document.createElement("img");
+document.body.appendChild(myDiv);
 
-
-}
-/* for (const item of countriesOne) {
-    myDiv.innerHTML = item;
-    document.body.appendChild(myDiv);
+const printDiv = (country) => {
+    for (const item of country) {
+        myDiv.innerHTML += 
+        `<div class="box">
+        <h4>${item.title}</h4>
+        <img src=${item.imgUrl} alt=${item.title}/>
+        </div>`
+    }
 };
- */
-
-/* myDiv.appendChild(myH4);
-myDiv.appendChild(myImg); */
+printDiv(countriesOne);
 
 //1.5
 
+const myBtn = document.createElement("button");
+myBtn.innerHTML = "X";
+document.body.appendChild(myBtn);
 
+const myBox = document.querySelectorAll(".box")
 
+myBtn.addEventListener("click", (ev) => {
+    countriesOne.splice(countriesOne.lastIndexOf(myBox), 1);
+    /* myBox.remove(); */
+ console.log(ev.target.innerHTML)}
+);
 
 
 //1.6
