@@ -42,33 +42,66 @@ const countriesOne = [
 	{title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=5'}
 ]; 
 
-const myDiv = document.createElement("div");
-document.body.appendChild(myDiv);
 
 const printDiv = (country) => {
     for (const item of country) {
+        const myDiv = document.createElement("div");
+        myDiv.classList.add("box");
         myDiv.innerHTML += 
-        `<div class="box">
-        <h4>${item.title}</h4>
-        <img src=${item.imgUrl} alt=${item.title}/>
-        </div>`
+        `<h4>${item.title}</h4>
+        <img src=${item.imgUrl} alt=${item.title}/>`;
+        document.body.appendChild(myDiv);
+
+  /*    const myH4 = document.createElement("h4");
+        myH4.textContent = item.title;
+        const myImg = document.createElement("img");
+        myImg.src = item.imgUrl;
+        myImg.alt = item.title;
+        myDiv.appendChild(myH4);
+        myDiv.appendChild(myImg);
+        document.body.appendChild(myDiv); */
     }
 };
-printDiv(countriesOne);
+printDiv(countriesOne); 
 
 //1.5
 
 const myBtn = document.createElement("button");
-myBtn.innerHTML = "X";
+myBtn.innerHTML = "Delete";
 document.body.appendChild(myBtn);
 
-const myBox = document.querySelectorAll(".box")
 
 myBtn.addEventListener("click", (ev) => {
-    countriesOne.splice(countriesOne.lastIndexOf(myBox), 1);
-    /* myBox.remove(); */
- console.log(ev.target.innerHTML)}
+const myBox = document.querySelectorAll(".box");
+ /* if (myBox.length <= 1) {
+    myBtn.innerHTML = "No hay más divs que eliminar";
+    myBtn.disabled = true;
+  }  */
+myBox[myBox.length - 1].remove();
+}
 );
 
-
 //1.6
+
+/* 
+for (const item of countriesOne) {
+    const myDiv = document.createElement("div");
+    myDiv.classList.add("box");
+     
+    const myH4 = document.createElement("h4");
+    myH4.textContent = item.title;
+    const myImg = document.createElement("img");
+    myImg.src = item.imgUrl;
+    myImg.alt = item.title;
+
+    const btn = document.createElement("button");
+    btn.innerHTML = "X";
+    btn.addEventListener("click", () => {
+        myDiv.remove();
+    })
+
+    myDiv.appendChild(myH4);
+    myDiv.appendChild(myImg);
+    myDiv.appendChild(btn);
+    document.body.appendChild(myDiv);
+}; */
